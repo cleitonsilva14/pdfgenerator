@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Nome </th>
+                <th> Sobrenome</th>
+                <th> Email</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.lastname}"></td>
+                <td th:text="${employee.email}"></td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
